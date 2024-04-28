@@ -1,21 +1,19 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
+import './index.css';
+import Home from './Components/Home';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-const useStyles = createUseStyles({
-  root: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  }
-});
-
-function App() {
-  const classes = useStyles();
+const App = () => {
   return (
-    <div className={classes.root}>
-      <h1>Test App</h1>
-    </div>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
   );
-}
+};
 
 export default App;
+
