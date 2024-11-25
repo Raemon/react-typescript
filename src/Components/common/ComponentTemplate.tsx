@@ -7,10 +7,12 @@ const useStyles = createUseStyles({
   }
 });
 
-const ComponentTemplate = ({}:{}): JSX.Element => {
+const ComponentTemplate = (): JSX.Element => {
   const classes = useStyles();
+
   return (
-    <div>
+    <div className={classes.root}>
+
     </div>
   );
 };
