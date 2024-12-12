@@ -79,14 +79,12 @@ const Editor = ({v=0,storageKey = 'ckeditor-content',initialValue = '',onChange,
   }, [config, initialValue, onChange, storageKey]);
 
   return (
-    <PageLayout v={v}>
-      <div className="w-full">
-        <div 
-          ref={containerRef}
-          className="min-h-[200px] border rounded-md w-[640px] focus:outline-none"
-        />
-      </div>
-    </PageLayout>
+    <div className="w-full">
+      <div 
+        ref={containerRef}
+        className="min-h-[200px] border rounded-md w-[640px] focus:outline-none"
+      />
+    </div>
   );
 };
 
